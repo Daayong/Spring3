@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class DBConnector {
 
 	public Connection getConnect() {

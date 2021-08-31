@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,23 +12,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.iu.util.DBConnector;
 
 @Controller
 @RequestMapping("/bankbook/*")
 public class BankbookController {
 	//pojo (plain Old Java Object) 
-	private BankBookService bankBookService;
+
+	@Autowired
+	private BankBookService bankbookService;
 	
-	public BankbookController(){
-		bankBookService = new BankBookService();
-	}
-	
-	
+
 	
 	@RequestMapping(value = "bankbookList.do", method = RequestMethod.GET)
 	public ModelAndView list(ModelAndView mv) {
-		ArrayList<BankBookDTO> ar= bankBookService.getList();
+		ArrayList<BankBookDTO> ar= bankbookService.getList();
 		
 		
 		System.out.println("bankbook list");
