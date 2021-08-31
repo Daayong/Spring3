@@ -14,7 +14,7 @@
 	
 	<h1>Renewal</h1>
 
-
+	<img alt="test" src="../resources/images/sharpei.jpg">
 
 
 

@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class DBConnector {
 
 	public Connection getConnect() {
