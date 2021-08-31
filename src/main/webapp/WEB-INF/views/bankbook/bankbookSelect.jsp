@@ -9,6 +9,8 @@
 <body>
 
 	<h1>BankBook Select Page</h1>
+	<h1>Test : ${test}</h1>
+	<h1>BookName : ${dto.bookName}</h1>
 
 </body>
 </html>
