@@ -21,6 +21,7 @@
 		
 		<a href="./bankbookDelete?bookNumber=${dto.bookNumber}">DELETE</a>
 		
+		<a href="./bankbookUpdate?bookNumber=${dto.bookNumber}">UPDATE</a>
 	</div>
 
 
