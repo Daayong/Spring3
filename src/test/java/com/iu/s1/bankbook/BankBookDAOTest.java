@@ -63,14 +63,13 @@ public class BankBookDAOTest extends MyJunitTest {
 	}
 	
 	
-	
-	//@Test
-	public void getListTest() {
-		List<BankBookDTO> ar=bankBookDAO.getList();
-		
-		assertNotEquals(0, ar.size());
-		
-	}
-	
+	/*
+	 * //@Test public void getListTest() { List<BankBookDTO>
+	 * ar=bankBookDAO.getList();
+	 * 
+	 * assertNotEquals(0, ar.size());
+	 * 
+	 * }
+	 */
 	
 }
