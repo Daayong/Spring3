@@ -13,33 +13,31 @@ public class BankBookService {
 	@Autowired
 	private BankBookDAO bankBookDAO;
 	
-	public BankBookDTO getSelect(BankBookDTO bankBookDTO) {
-		return bankBookDAO.getSelect(bankBookDTO);
+	public int setUpdate(BankBookDTO bankBookDTO) {
+		return bankBookDAO.setUpdate(bankBookDTO);
 	}
 	
-	public List<BankBookDTO> getList(Pager pager){
-		pager.makeRow();
-		pager.makeNum();
-		return bankBookDAO.getList(pager);
+	public int setDelete(Long bookNumber) {
+		return bankBookDAO.setDelete(bookNumber);
 	}
 	
 	public int setInsert(BankBookDTO bankBookDTO) {
 		return bankBookDAO.setInsert(bankBookDTO);
 	}
 	
-	
-	public int setDelete(Long bookNumber) {
-		return bankBookDAO.setDelete(bookNumber);		
+	public List<BankBookDTO> getList(Pager pager){
+		
+		System.out.println(pager.getKind());
+		System.out.println(pager.getSearch());
+		Long totalCount= bankBookDAO.getCount(pager);
+		pager.makeNum(totalCount);
+		pager.makeRow();
+		return bankBookDAO.getList(pager);
 	}
 	
-	public int setUpdate(BankBookDTO bankBookDTO) {
-		return bankBookDAO.setUpdate(bankBookDTO);
+	public BankBookDTO getSelect(BankBookDTO bankBookDTO) {
+		System.out.println("Service : "+bankBookDTO.getBookNumber());
+		return bankBookDAO.getSelect(bankBookDTO);
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }

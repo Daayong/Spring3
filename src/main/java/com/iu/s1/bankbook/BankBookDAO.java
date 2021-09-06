@@ -23,6 +23,12 @@ public class BankBookDAO {
 		
 	}
 	
+	public Long getCount(Pager pager) {
+		return sqlSession.selectOne(NAMESPACE+"getCount",pager);
+	}
+	
+	
+	
 	
 	public int setDelete(Long bookNumber) {
 		
